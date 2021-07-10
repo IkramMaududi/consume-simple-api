@@ -22,35 +22,28 @@ const App = () => {
 
 	return (
         <>
-            {dataFromAPI.exist ? (
+            {dataFromAPI? (
                 <div className="Portfolio">
                     {dataFromAPI.map((val, index) => {
                         return (
                             <div key={index} class="movie-element">
                                 <div class="movie-element__image">
-                                    <img src={val.picture.thumbnail} alt="profile-pict" width="300" height="400"/>
+                                    <img className="photo" src={val.picture.thumbnail} alt="profile-pict"/>
                                 </div>
                                 <div class="movie-element__info">
                                     <div className="attribute">
                                         <h2>Name</h2>
                                         <h2>Email</h2>
-                                        <h2>Telephone-1</h2>
-                                        <h2>Telephone-2</h2>
+                                        <h2>Tel-1</h2>
+                                        <h2>Tel-2</h2>
                                         <h2>Country</h2>
                                     </div>
-                                    <div className="semicolon">
-                                        <h2>:</h2>
-                                        <h2>:</h2>
-                                        <h2>:</h2>
-                                        <h2>:</h2>
-                                        <h2>:</h2>
-                                    </div>
                                     <div className="value">
-                                        <h2>{val.name.title} {val.name.first} {val.name.last}</h2>
-                                        <h2>{val.phone}</h2>
-                                        <h2>{val.cell}</h2>
-                                        <h2>{val.email}</h2>
-                                        <h2>{val.location.country}</h2>
+                                        <h2>:  {val.name.title} {val.name.first} {val.name.last}</h2>
+                                        <h2>:  {val.email}</h2>
+                                        <h2>:  {val.phone}</h2>
+                                        <h2>:  {val.cell}</h2>
+                                        <h2>:  {val.location.country}</h2>
                                     </div>
                                     {/* <p>rating</p> */}
                                 </div>
